@@ -1,5 +1,5 @@
 ## pyspeex-wx
- 把从微信服务端下载的高清录音文件 *.speex文件解码为*.wav文件
+ 把从微信服务端下载的高清录音文件 \*.speex文件解码为\*.wav文件
 
 ### 环境：
 1. MAC OS /Linux ubuntu
@@ -7,34 +7,42 @@
 3. python 3.6
 
 ### Quick Start：
- - 安装speex，下载speex源码
-  > http://downloads.us.xiph.org/releases/speex/speex-1.2.0.tar.gz
+- 安装speex，下载speex源码
+  
+  http://downloads.us.xiph.org/releases/speex/speex-1.2.0.tar.gz
+    
+  解压speex-1.2.0.tar.gz
 
-  > 解压speex-1.2.0.tar.gz
+    cd speex-1.2.0
 
->cd speex-1.2.0
+    ./configure 
 
->./configure 
-
->sudo make && make install 
+   sudo make && make install 
 
 
 - 编译动态库
-> cd declib
+    
+     cd declib
  
-linux系统:  
-> make -f makefile-linux  
-
-- mac系统:
-  
-> make -f makefile-mac    
+    - linux系统:  
+     
+     make -f makefile-linux  
+    
+    - mac系统:
+      
+    make -f makefile-mac    
 
 - 测试
+    
     .decode("pathto/a.speex", "pathto/a-test.wav");
     
-4.测试文件
-./resources/a.speex
-./resources/b.speex
+ ## 问题
+   > 1、mac环境编译 fatal error: malloc.h: No such file or directory
+   修改为malloc/malloc.h
+    
+    
+    
+        
 
 
 ## 参考
